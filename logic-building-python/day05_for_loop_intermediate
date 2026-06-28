@@ -1,0 +1,147 @@
+# =================================================================
+# Day 5 - For Loop Intermediate
+# Date: 28 June 2026
+# =================================================================
+
+# Q1 - Print Multiplication Tables from 1 to n
+n = int(input("Enter a number: "))
+
+for i in range(1, n + 1):
+    print(f"\nTable of {i}")
+
+    for j in range(1, 11):
+        print(f"{i} x {j} = {i * j}")
+
+print()
+
+
+# Q2 - Print All Pairs (i, j) where i and j range from 1 to n
+n = int(input("Enter a number: "))
+
+for i in range(1, n + 1):
+    for j in range(1, n + 1):
+        print(f"({i}, {j})")
+
+print()
+
+
+# Q3 - Count Factors of Every Number from 1 to n
+n = int(input("Enter a number: "))
+
+for i in range(1, n + 1):
+    count = 0
+
+    for j in range(1, i + 1):
+        if i % j == 0:
+            count += 1
+
+    print(f"{i} has {count} factors")
+
+print()
+
+
+# Q4 - Print All Prime Numbers from 1 to n
+n = int(input("Enter a number: "))
+
+for i in range(2, n + 1):
+    count = 0
+
+    for j in range(1, i + 1):
+        if i % j == 0:
+            count += 1
+
+    if count == 2:
+        print(i)
+
+print()
+
+
+# Q5 - Number Triangle Pattern
+n = int(input("Enter number of rows: "))
+
+for i in range(1, n + 1):
+    for j in range(1, i + 1):
+        print(j, end=" ")
+    print()
+
+print()
+
+
+# Q6 - Matrix Row Sums and Column Sums
+rows = int(input("Enter number of rows: "))
+cols = int(input("Enter number of columns: "))
+
+matrix = []
+
+print("Enter matrix elements:")
+
+for i in range(rows):
+    row = []
+
+    for j in range(cols):
+        value = int(input())
+        row.append(value)
+
+    matrix.append(row)
+
+print("\nRow Sums:")
+
+for i in range(rows):
+    sum = 0
+
+    for j in range(cols):
+        sum += matrix[i][j]
+
+    print(f"Row {i + 1} Sum = {sum}")
+
+print("\nColumn Sums:")
+
+for j in range(cols):
+    sum = 0
+
+    for i in range(rows):
+        sum += matrix[i][j]
+
+    print(f"Column {j + 1} Sum = {sum}")
+
+print()
+
+
+# Q7 - Print All Pythagorean Triplets up to n
+n = int(input("Enter a number: "))
+
+for a in range(1, n + 1):
+    for b in range(a, n + 1):
+        for c in range(b, n + 1):
+            if a * a + b * b == c * c:
+                print(a, b, c)
+
+print()
+
+
+# Q8 - Print Numbers from 1 to 100 and Stop when Divisible by 17
+for i in range(1, 101):
+    if i % 17 == 0:
+        break
+
+    print(i)
+
+print()
+
+
+# Q9 - Print Numbers from 1 to 100 and Skip Multiples of 5
+for i in range(1, 101):
+    if i % 5 == 0:
+        continue
+
+    print(i)
+
+print()
+
+
+# Q10 - Print the Multiplication Table of Every Number from 1 to 10
+for i in range(1, 11):
+    print(f"\nTable of {i}")
+
+    for j in range(1, 11):
+        print(f"{i} x {j} = {i * j}")
