@@ -1,0 +1,210 @@
+# =================================================================
+# Day 5 - Loop Control & Series Programs
+# Phase 1: Q1-Q16
+# Date: 27 June 2026
+# =================================================================
+
+# Q1 - Print Numbers from 1 to 100 and Stop at First Number Divisible by 17
+for i in range(1, 101):
+    if i % 17 == 0:
+        break
+    print(i)
+
+print()
+
+
+# Q2 - Print Numbers from 1 to 100, Skip Multiples of 5
+for i in range(1, 101):
+    if i % 5 == 0:
+        continue
+    print(i)
+
+print()
+
+
+# Q3 - Take 5 Numbers and Skip Zeros
+for i in range(5):
+    n = int(input("Enter a number: "))
+
+    if n == 0:
+        continue
+
+    print(n)
+
+print()
+
+
+# Q4 - Search a Number in a List and Stop When Found
+numbers = [12, 45, 67, 89, 23, 56]
+
+key = int(input("Enter number to search: "))
+
+for num in numbers:
+    if num == key:
+        print("Number Found")
+        break
+else:
+    print("Number Not Found")
+
+print()
+
+
+# Q5 - Print Numbers Until a Negative Number is Entered
+while True:
+    n = int(input("Enter a number: "))
+
+    if n < 0:
+        break
+
+    print(n)
+
+print()
+
+
+# Q6 - Print Only Even Numbers, Skip Odd Numbers
+while True:
+    n = int(input("Enter a number: "))
+
+    if n < 0:
+        break
+
+    if n % 2 != 0:
+        continue
+
+    print(n)
+
+print()
+
+
+# Q7 - Stop When Running Sum Becomes Greater Than 100
+sum = 0
+
+while True:
+    n = int(input("Enter a number: "))
+
+    sum += n
+
+    if sum > 100:
+        break
+
+print(f"Sum = {sum}")
+
+print()
+
+
+# Q8 - Sum of First 10 Natural Numbers
+sum = 0
+
+for i in range(1, 11):
+    sum += i
+
+print(f"Sum = {sum}")
+
+print()
+
+
+# Q9 - Arithmetic Progression (AP)
+a = int(input("Enter first term: "))
+d = int(input("Enter common difference: "))
+n = int(input("Enter number of terms: "))
+
+for i in range(n):
+    print(a)
+    a += d
+
+print()
+
+
+# Q10 - Geometric Progression (GP)
+a = int(input("Enter first term: "))
+r = int(input("Enter common ratio: "))
+n = int(input("Enter number of terms: "))
+
+for i in range(n):
+    print(a)
+    a *= r
+
+print()
+
+
+# Q11 - Sum of Squares (1² + 2² + 3² + ... + n²)
+n = int(input("Enter a number: "))
+
+sum = 0
+
+for i in range(1, n + 1):
+    sum += i ** 2
+
+print(f"Sum = {sum}")
+
+print()
+
+
+# Q12 - Sum of Cubes (1³ + 2³ + 3³ + ... + n³)
+n = int(input("Enter a number: "))
+
+sum = 0
+
+for i in range(1, n + 1):
+    sum += i ** 3
+
+print(f"Sum = {sum}")
+
+print()
+
+
+# Q13 - Harmonic Series (1 + 1/2 + 1/3 + ... + 1/n)
+n = int(input("Enter a number: "))
+
+sum = 0
+
+for i in range(1, n + 1):
+    sum += 1 / i
+
+print(f"Sum = {sum}")
+
+print()
+
+
+# Q14 - Sum of Powers of 2 (1 + 2 + 4 + ... + 2ⁿ)
+n = int(input("Enter a number: "))
+
+sum = 0
+
+for i in range(0, n + 1):
+    sum += 2 ** i
+
+print(f"Sum = {sum}")
+
+print()
+
+
+# Q15 - Sum of Factorials (1! + 2! + 3! + ... + n!)
+n = int(input("Enter a number: "))
+
+sum = 0
+
+for i in range(1, n + 1):
+
+    fact = 1
+
+    for j in range(1, i + 1):
+        fact *= j
+
+    sum += fact
+
+print(f"Sum = {sum}")
+
+print()
+
+
+# Q16 - Sum of Geometric Series (1 + x + x² + x³ + ... + xⁿ)
+x = int(input("Enter the value of x: "))
+n = int(input("Enter the value of n: "))
+
+sum = 0
+
+for i in range(0, n + 1):
+    sum += x ** i
+
+print(f"Sum = {sum}")
