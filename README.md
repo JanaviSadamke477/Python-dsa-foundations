@@ -220,7 +220,7 @@ The journey continues with:
 * 🔹 Functions
 * 🔹 Strings
 * 🔹 Lists
-* 🔹 Tuples
+* 🔹 Tuples 
 * 🔹 Dictionaries
 * 🔹 Sets
 * 🔹 File Handling
