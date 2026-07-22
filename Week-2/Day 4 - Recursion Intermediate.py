@@ -84,7 +84,7 @@ def sum_cubes(n):
 print(sum_cubes(6))
 '''
 
-
+'''
 def print_digits_left_to_right(n):
     if n == 0:
         return 
@@ -93,5 +93,30 @@ def print_digits_left_to_right(n):
     return print_digits_left_to_right(n//10)
     print(digit)
 print(print_digits_left_to_right(5348))
+'''
+
+'''
+def print_digits_left_to_right(n):
+    if n == 0:
+        return
+
+    print_digits_left_to_right(n // 10)
+
+    digit = n % 10
+    print(digit)
+
+print_digits_left_to_right(5348)
+'''
+'''
+def decimal_to_binary(n):
+    if n == 0:
+        return
+
+    decimal_to_binary(n//2)
+
+    print(n % 2, end="")
+decimal_to_binary(13)
+'''
+
 
 
