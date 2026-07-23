@@ -1,0 +1,46 @@
+'''
+def print_even(n):
+    if n < 1:
+        return 
+    
+    print_even(n-1)
+    if n % 2 == 0:
+        print(n)
+print_even(6)
+'''
+'''
+def print_odd(n):
+    if n < 1:
+        return 
+    if n % 2 != 0:
+        print(n)
+    print_odd(n-1)
+    
+print_odd(6)
+'''
+'''
+def largest_digit(n):
+    if n < 10:
+        return n
+        
+    digit = n % 10
+    return max(digit, largest_digit(n//10))
+    '''
+'''
+def smallest_digit(n):
+    if n < 10:
+        return n
+        
+    digit = n % 10
+    return min(digit, smallest_digit(n//10))    
+
+print(smallest_digit(846))
+'''
+
+def armstrong_number_check(n, count):
+    if n == 0:
+        return 0
+
+    digit = n % 10
+    return digit ** count + armstrong_number_check(n // 10, count)
+armstrong_number_check(153, 0)
